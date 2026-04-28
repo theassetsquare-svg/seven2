@@ -50,4 +50,4 @@ Allow: /
 User-agent: Bytespider
 Allow: /
 
-Sitemap: https://theassetsquare-svg.github.io/seven2/sitemap.xml
+Sitemap: https://seven2.pages.dev/sitemap.xml

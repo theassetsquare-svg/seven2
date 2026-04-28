@@ -2,22 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://theassetsquare-svg.github.io/seven2/</loc>
+    <loc>https://seven2.pages.dev/</loc>
     <lastmod>2026-04-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://theassetsquare-svg.github.io/seven2/og-square.png</image:loc>
+      <image:loc>https://seven2.pages.dev/og-square.png</image:loc>
       <image:title>대전세븐나이트 W.T 원숭이 010-3242-1504</image:title>
       <image:caption>대전 둔산동 No.1 나이트 4인1조 부킹 W.T 원숭이</image:caption>
     </image:image>
   </url>
-  <url><loc>https://theassetsquare-svg.github.io/seven2/guide.html</loc><lastmod>2026-04-28</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://theassetsquare-svg.github.io/seven2/reviews.html</loc><lastmod>2026-04-28</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://theassetsquare-svg.github.io/seven2/price.html</loc><lastmod>2026-04-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://theassetsquare-svg.github.io/seven2/faq.html</loc><lastmod>2026-04-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://theassetsquare-svg.github.io/seven2/hoesik-2cha.html</loc><lastmod>2026-04-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://theassetsquare-svg.github.io/seven2/birthday.html</loc><lastmod>2026-04-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://theassetsquare-svg.github.io/seven2/first-visit.html</loc><lastmod>2026-04-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://theassetsquare-svg.github.io/seven2/group.html</loc><lastmod>2026-04-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://seven2.pages.dev/guide.html</loc><lastmod>2026-04-28</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://seven2.pages.dev/reviews.html</loc><lastmod>2026-04-28</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://seven2.pages.dev/price.html</loc><lastmod>2026-04-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://seven2.pages.dev/faq.html</loc><lastmod>2026-04-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://seven2.pages.dev/hoesik-2cha.html</loc><lastmod>2026-04-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://seven2.pages.dev/birthday.html</loc><lastmod>2026-04-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://seven2.pages.dev/first-visit.html</loc><lastmod>2026-04-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://seven2.pages.dev/group.html</loc><lastmod>2026-04-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
 </urlset>

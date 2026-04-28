@@ -1,8 +1,8 @@
 // IndexNow ping - Bing/Yandex/Naver(2024+)에 즉시 인덱싱 통지
 // 사용법: node _tools/indexnow.mjs
 const KEY = 'bd0c822862ed44539963709b53f2ef76';
-const HOST = 'theassetsquare-svg.github.io';
-const SITE = `https://${HOST}/seven2/`;
+const HOST = 'seven2.pages.dev';
+const SITE = `https://${HOST}/`;
 
 const PAGES = [
   '', 'guide.html', 'reviews.html', 'price.html', 'faq.html',

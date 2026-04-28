@@ -32,7 +32,7 @@
 대전 둔산동 가는 분들 진짜 추천. 검색해보면 알지만 후기도 1287건 평점 4.9.
 
 📞 W.T 원숭이: 010-3242-1504
-🌐 https://theassetsquare-svg.github.io/seven2/
+🌐 https://seven2.pages.dev/
 📍 대전광역시 서구 둔산동
 🕐 매일 20:00 ~ 05:00
 
@@ -59,7 +59,7 @@
 4인1조 부킹 우선이라 자리 빨리 잡아주고 정찰제라 결제도 깔끔.
 처음이라도 다 알아서 챙겨주니까 부담없음.
 
-https://theassetsquare-svg.github.io/seven2/
+https://seven2.pages.dev/
 ```
 
 ---
@@ -95,7 +95,7 @@ W.T 원숭이 통해서 가니까 자리 진짜 빠르게 잡아주심
 대전 둔산동 세븐나이트 W.T 원숭이 (010-3242-1504)
 4인1조 부킹 진짜 빠름. 자리 미리 다 세팅해두고 도착하면 바로 시작.
 정찰제라 추가요금도 없고. 대전 회식·생일·단체 모임 다 책임짐.
-👉 https://theassetsquare-svg.github.io/seven2/
+👉 https://seven2.pages.dev/
 ```
 
 ---
@@ -109,10 +109,10 @@ W.T 원숭이 통해서 가니까 자리 진짜 빠르게 잡아주심
 🕐 영업: 매일 20:00 ~ 새벽 05:00
 💎 4인1조 부킹 1등 / VIP룸 즉시예약 / 정찰제
 
-🌐 공식: https://theassetsquare-svg.github.io/seven2/
-📖 가이드: https://theassetsquare-svg.github.io/seven2/guide.html
-⭐ 후기: https://theassetsquare-svg.github.io/seven2/reviews.html
-💰 가격: https://theassetsquare-svg.github.io/seven2/price.html
+🌐 공식: https://seven2.pages.dev/
+📖 가이드: https://seven2.pages.dev/guide.html
+⭐ 후기: https://seven2.pages.dev/reviews.html
+💰 가격: https://seven2.pages.dev/price.html
 
 #대전세븐나이트 #대전나이트 #둔산동나이트 #대전부킹 #세븐나이트원숭이
 ```
@@ -124,7 +124,7 @@ W.T 원숭이 통해서 가니까 자리 진짜 빠르게 잡아주심
 자기소개에:
 ```
 대전세븐나이트 W.T 원숭이 / 부킹·예약 010-3242-1504 / 둔산동 No.1 나이트 4인1조 우선배정
-👉 https://theassetsquare-svg.github.io/seven2/
+👉 https://seven2.pages.dev/
 ```
 
 ---
@@ -152,5 +152,5 @@ W.T 원숭이 통해서 가니까 자리 진짜 빠르게 잡아주심
 **핵심 원칙**:
 - 같은 글 복사 X (네이버 어뷰징 감지) → 표현 살짝 바꾸기
 - 이미지 1~3장 첨부 (og-square.png 활용)
-- 무조건 마지막에 https://theassetsquare-svg.github.io/seven2/ 링크 + 010-3242-1504
+- 무조건 마지막에 https://seven2.pages.dev/ 링크 + 010-3242-1504
 - 댓글에 "전화드렸어요", "예약 잡았어요" 등 자연 댓글 자가 작성 X (계정 정지)

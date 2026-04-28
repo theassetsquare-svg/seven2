@@ -23,7 +23,7 @@ W.T라는 부킹 시스템이 있는데, 4인1조 부킹 1등이라는 원숭이
 검색해서 안 나오는 게 더 이상함.
 
 📞 W.T 원숭이: 010-3242-1504
-🌐 https://theassetsquare-svg.github.io/seven2/
+🌐 https://seven2.pages.dev/
 📍 대전광역시 서구 둔산동
 🕐 매일 20:00 ~ 05:00
 
@@ -46,7 +46,7 @@ W.T라는 부킹 시스템이 있는데, 4인1조 부킹 1등이라는 원숭이
 대전에서 이만한 곳 찾기 힘들다.
 
 📞 W.T 원숭이: 010-3242-1504
-🌐 https://theassetsquare-svg.github.io/seven2/
+🌐 https://seven2.pages.dev/
 📍 대전광역시 서구 둔산동
 🕐 매일 20:00 ~ 05:00
 
@@ -69,7 +69,7 @@ W.T라는 부킹 시스템이 있는데, 4인1조 부킹 1등이라는 원숭이
 주변에 추천하고 다님.
 
 📞 W.T 원숭이: 010-3242-1504
-🌐 https://theassetsquare-svg.github.io/seven2/
+🌐 https://seven2.pages.dev/
 📍 대전광역시 서구 둔산동
 🕐 매일 20:00 ~ 05:00
 
@@ -92,7 +92,7 @@ W.T라는 부킹 시스템이 있는데, 4인1조 부킹 1등이라는 원숭이
 대전 둔산동 가는 분들 진짜 추천.
 
 📞 W.T 원숭이: 010-3242-1504
-🌐 https://theassetsquare-svg.github.io/seven2/
+🌐 https://seven2.pages.dev/
 📍 대전광역시 서구 둔산동
 🕐 매일 20:00 ~ 05:00
 
@@ -115,7 +115,7 @@ W.T라는 부킹 시스템이 있는데, 4인1조 부킹 1등이라는 원숭이
 W.T 원숭이 진짜 일 잘함.
 
 📞 W.T 원숭이: 010-3242-1504
-🌐 https://theassetsquare-svg.github.io/seven2/
+🌐 https://seven2.pages.dev/
 📍 대전광역시 서구 둔산동
 🕐 매일 20:00 ~ 05:00
 
@@ -128,7 +128,7 @@ W.T 원숭이 진짜 일 잘함.
 ```
 대전 둔산동 세븐나이트 W.T 원숭이 (010-3242-1504)
 도착 30분 전 전화면 자리 다 세팅해놓음.
-👉 https://theassetsquare-svg.github.io/seven2/
+👉 https://seven2.pages.dev/
 #대전세븐 #대전W.T #세븐나이트원숭이 #대전나이트클럽
 ```
 
@@ -136,7 +136,7 @@ W.T 원숭이 진짜 일 잘함.
 ```
 대전 둔산동 세븐나이트 W.T 원숭이 (010-3242-1504)
 도착 30분 전 전화면 자리 다 세팅해놓음.
-👉 https://theassetsquare-svg.github.io/seven2/
+👉 https://seven2.pages.dev/
 #대전둔산동 #대전모임 #대전동기회 #대전송년회
 ```
 
@@ -144,7 +144,7 @@ W.T 원숭이 진짜 일 잘함.
 ```
 대전 둔산동 세븐나이트 W.T 원숭이 (010-3242-1504)
 VIP룸도 즉시 잡아주고 분위기 좋음.
-👉 https://theassetsquare-svg.github.io/seven2/
+👉 https://seven2.pages.dev/
 #대전세븐나이트 #대전나이트 #둔산동나이트 #대전부킹
 ```
 
@@ -152,7 +152,7 @@ VIP룸도 즉시 잡아주고 분위기 좋음.
 ```
 대전 둔산동 세븐나이트 W.T 원숭이 (010-3242-1504)
 4인1조 부킹 라인 우선 배정이라 다른 일행보다 합석 빠름.
-👉 https://theassetsquare-svg.github.io/seven2/
+👉 https://seven2.pages.dev/
 #대전나이트추천 #대전부킹1등 #4인1조 #대전여친선물
 ```
 
@@ -160,7 +160,7 @@ VIP룸도 즉시 잡아주고 분위기 좋음.
 ```
 대전 둔산동 세븐나이트 W.T 원숭이 (010-3242-1504)
 4인1조 부킹 라인 우선 배정이라 다른 일행보다 합석 빠름.
-👉 https://theassetsquare-svg.github.io/seven2/
+👉 https://seven2.pages.dev/
 #대전둔산동 #대전모임 #대전동기회 #대전송년회
 ```
 
