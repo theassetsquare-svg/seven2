@@ -280,6 +280,24 @@
     }
   }
   </script>
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true });
+    // 전화 클릭 자동 이벤트
+    document.addEventListener('DOMContentLoaded', function(){
+      document.querySelectorAll('a[href^="tel:"]').forEach(function(a){
+        a.addEventListener('click', function(){
+          gtag('event', 'phone_call', { 'phone_number': '01032421504' });
+        });
+      });
+    });
+  </script>
+  <!-- /GA4 -->
 </head>
 <body>
   <a class="skip-link" href="#main">본문 바로가기</a>
@@ -489,7 +507,11 @@
       <a href="/seven2/guide.html">완벽 가이드</a> ·
       <a href="/seven2/reviews.html">후기 모음</a> ·
       <a href="/seven2/price.html">가격 안내</a> ·
-      <a href="/seven2/faq.html">FAQ 30선</a>
+      <a href="/seven2/faq.html">FAQ 30선</a> ·
+      <a href="/seven2/hoesik-2cha.html">회식 2차</a> ·
+      <a href="/seven2/birthday.html">생일파티</a> ·
+      <a href="/seven2/first-visit.html">처음 방문</a> ·
+      <a href="/seven2/group.html">단체 모임</a>
     </nav>
 
     <p class="footer__legal">

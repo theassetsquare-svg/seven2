@@ -7,6 +7,9 @@
   <meta name="description" content="대전세븐나이트에 자주 묻는 질문 30가지를 W.T 원숭이가 직접 답변합니다. 예약, 위치, 가격, 4인1조, 복장, 주차, 카드결제 등. 010-3242-1504." />
   <meta name="keywords" content="대전세븐나이트 FAQ, 대전세븐나이트 자주묻는질문, 대전세븐나이트 예약 방법, 대전세븐나이트 영업시간, 대전 나이트 처음, 4인1조 설명" />
   <meta name="robots" content="index, follow" />
+  
+  <meta name="google-site-verification" content="GOOGLE_VERIFICATION_CODE_HERE" />
+  <meta name="naver-site-verification" content="NAVER_VERIFICATION_CODE_HERE" />
   <link rel="canonical" href="https://theassetsquare-svg.github.io/seven2/faq.html" />
   <meta property="og:title" content="대전세븐나이트 FAQ - W.T 원숭이" />
   <meta property="og:url" content="https://theassetsquare-svg.github.io/seven2/faq.html" />
@@ -37,6 +40,24 @@
     ]
   }
   </script>
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true });
+    // 전화 클릭 자동 이벤트
+    document.addEventListener('DOMContentLoaded', function(){
+      document.querySelectorAll('a[href^="tel:"]').forEach(function(a){
+        a.addEventListener('click', function(){
+          gtag('event', 'phone_call', { 'phone_number': '01032421504' });
+        });
+      });
+    });
+  </script>
+  <!-- /GA4 -->
 </head>
 <body>
   <div class="callbar">

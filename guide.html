@@ -9,6 +9,9 @@
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta name="naverbot" content="index, follow" />
   <meta name="yeti" content="index, follow" />
+  
+  <meta name="google-site-verification" content="GOOGLE_VERIFICATION_CODE_HERE" />
+  <meta name="naver-site-verification" content="NAVER_VERIFICATION_CODE_HERE" />
   <link rel="canonical" href="https://theassetsquare-svg.github.io/seven2/guide.html" />
   <meta property="og:type" content="article" />
   <meta property="og:title" content="대전세븐나이트 완벽 가이드 - W.T 원숭이" />
@@ -70,6 +73,24 @@
     ]
   }
   </script>
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true });
+    // 전화 클릭 자동 이벤트
+    document.addEventListener('DOMContentLoaded', function(){
+      document.querySelectorAll('a[href^="tel:"]').forEach(function(a){
+        a.addEventListener('click', function(){
+          gtag('event', 'phone_call', { 'phone_number': '01032421504' });
+        });
+      });
+    });
+  </script>
+  <!-- /GA4 -->
 </head>
 <body>
   <div class="callbar">
