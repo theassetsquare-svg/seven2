@@ -279,6 +279,13 @@ h1 { font-family: 'Black Han Sans', sans-serif; }
 .footer__seo {
   font-size: 11px; color: #444; margin-top: 30px;
   max-width: 900px; margin-left: auto; margin-right: auto;
+  line-height: 1.8;
+}
+.footer__links {
+  margin: 20px 0; font-size: 14px;
+}
+.footer__links a {
+  color: #ffd84d; padding: 0 4px;
 }
 
 /* === 반응형 === */

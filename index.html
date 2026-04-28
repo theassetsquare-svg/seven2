@@ -213,9 +213,56 @@
     "@type": "BreadcrumbList",
     "itemListElement": [
       {"@type":"ListItem","position":1,"name":"홈","item":"https://theassetsquare-svg.github.io/seven2/"},
-      {"@type":"ListItem","position":2,"name":"대전나이트","item":"https://theassetsquare-svg.github.io/seven2/#about"},
-      {"@type":"ListItem","position":3,"name":"세븐나이트 예약","item":"https://theassetsquare-svg.github.io/seven2/#reserve"}
+      {"@type":"ListItem","position":2,"name":"가이드","item":"https://theassetsquare-svg.github.io/seven2/guide.html"},
+      {"@type":"ListItem","position":3,"name":"후기","item":"https://theassetsquare-svg.github.io/seven2/reviews.html"},
+      {"@type":"ListItem","position":4,"name":"가격","item":"https://theassetsquare-svg.github.io/seven2/price.html"},
+      {"@type":"ListItem","position":5,"name":"FAQ","item":"https://theassetsquare-svg.github.io/seven2/faq.html"}
     ]
+  }
+  </script>
+
+  <!-- 구조화 데이터: Speakable (음성검색 - 구글 어시스턴트 / Bixby) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "대전세븐나이트 W.T 원숭이 010-3242-1504",
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": [".hero__title", ".hero__sub", ".lead"]
+    },
+    "url": "https://theassetsquare-svg.github.io/seven2/"
+  }
+  </script>
+
+  <!-- 구조화 데이터: Service (검색 의도 매칭 강화) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "대전세븐나이트 부킹 예약 서비스",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "대전세븐나이트 W.T 원숭이",
+      "telephone": "+82-10-3242-1504"
+    },
+    "areaServed": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {"@type":"GeoCoordinates","latitude":36.3504,"longitude":127.3845},
+      "geoRadius": "50000"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "예약 옵션",
+      "itemListElement": [
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"일반 테이블 예약"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"코너석 예약"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"VIP룸 예약"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"4인1조 부킹 우선 라인"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"생일파티 패키지"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"단체 회식 2차 예약"}}
+      ]
+    }
   }
   </script>
 </head>
@@ -232,10 +279,11 @@
 
   <header class="hero">
     <nav class="nav" aria-label="주요 메뉴">
-      <a href="#about" aria-current="page">소개</a>
-      <a href="#system">4인1조</a>
-      <a href="#reviews">후기</a>
-      <a href="#faq">자주묻는질문</a>
+      <a href="/seven2/" aria-current="page">홈</a>
+      <a href="/seven2/guide.html">가이드</a>
+      <a href="/seven2/reviews.html">후기</a>
+      <a href="/seven2/price.html">가격</a>
+      <a href="/seven2/faq.html">FAQ</a>
       <a href="#location">오시는길</a>
     </nav>
 
@@ -420,13 +468,27 @@
   <footer class="footer">
     <p><strong>대전세븐나이트 · W.T 원숭이</strong></p>
     <p>예약·문의: <a href="tel:01032421504">010-3242-1504</a> · 대전광역시 서구 둔산동</p>
+
+    <nav class="footer__links" aria-label="페이지 링크">
+      <a href="/seven2/">홈</a> ·
+      <a href="/seven2/guide.html">완벽 가이드</a> ·
+      <a href="/seven2/reviews.html">후기 모음</a> ·
+      <a href="/seven2/price.html">가격 안내</a> ·
+      <a href="/seven2/faq.html">FAQ 30선</a>
+    </nav>
+
     <p class="footer__legal">
       ⚠ 본 페이지는 만 19세 이상 성인만 이용 가능합니다.
       청소년 출입·고용 금지 (청소년 보호법 제2조).
       음주운전은 절대 금물이며, 음주 후에는 반드시 대리운전을 이용해 주세요.
     </p>
     <p class="footer__seo" aria-hidden="true">
-      대전세븐나이트 · 대전 세븐나이트 · 세븐나이트 · 대전나이트 · 대전나이트클럽 · 둔산동나이트 · 대전부킹 · 대전세븐 · 세븐나이트원숭이 · 대전 둔산동 나이트 · 대전 세븐 W.T · 대전 세븐 웨이터 · 세븐나이트 예약 · 대전 나이트 부킹 1등
+      대전세븐나이트 · 대전 세븐나이트 · 세븐나이트 · 대전나이트 · 대전나이트클럽 · 둔산동나이트 · 대전부킹 · 대전세븐 · 세븐나이트원숭이 · 대전 둔산동 나이트 · 대전 세븐 W.T · 대전 세븐 웨이터 · 세븐나이트 예약 · 대전 나이트 부킹 1등 ·
+      대전세븐나이트 위치 · 대전세븐나이트 가격 · 대전세븐나이트 후기 · 대전세븐나이트 영업시간 · 대전세븐나이트 예약 ·
+      대전 둔산동 나이트 추천 · 대전 회식 2차 · 대전 생일파티 · 대전 VIP룸 · 대전 부킹 1등 ·
+      세종 나이트 · 천안 나이트 · 청주 나이트 · 충청 나이트 · 충남 나이트 ·
+      대전 세븐나이트 가는법 · 대전 세븐나이트 카톡 · 대전 세븐나이트 W.T 추천 ·
+      Daejeon Seven Night · Daejeon Nightclub · Dunsan Nightclub · Daejeon W.T · Daejeon Booking
     </p>
   </footer>
 
