@@ -1,0 +1,25 @@
+{
+  "name": "seven2",
+  "version": "1.0.0",
+  "description": "대전세븐나이트 4인1조 부킹 W.T 원숭이 (☎ 010-3242-1504) 공식 랜딩페이지. 네이버·구글·AI 검색 상위노출용 SEO 풀패키지 적용.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theassetsquare-svg/seven2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/theassetsquare-svg/seven2/issues"
+  },
+  "homepage": "https://github.com/theassetsquare-svg/seven2#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.59.1",
+    "@resvg/resvg-js": "^2.6.2",
+    "sharp": "^0.34.5"
+  }
+}
