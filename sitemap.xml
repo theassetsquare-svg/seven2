@@ -1,23 +1,104 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://seven2.pages.dev/</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-04-28T02:58:37.854Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://seven2.pages.dev/og-square.png</image:loc>
-      <image:title>대전세븐나이트 W.T 원숭이 010-3242-1504</image:title>
-      <image:caption>대전 둔산동 No.1 나이트 4인1조 부킹 W.T 원숭이</image:caption>
+      <image:loc>https://seven2.pages.dev/og-home.png</image:loc>
+      <image:title>대전세븐나이트 W.T 원숭이</image:title>
+      <image:caption>대전 둔산동 No.1 나이트 4인1조 부킹</image:caption>
     </image:image>
   </url>
-  <url><loc>https://seven2.pages.dev/guide.html</loc><lastmod>2026-04-28</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://seven2.pages.dev/reviews.html</loc><lastmod>2026-04-28</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://seven2.pages.dev/price.html</loc><lastmod>2026-04-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://seven2.pages.dev/faq.html</loc><lastmod>2026-04-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://seven2.pages.dev/hoesik-2cha.html</loc><lastmod>2026-04-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://seven2.pages.dev/birthday.html</loc><lastmod>2026-04-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://seven2.pages.dev/first-visit.html</loc><lastmod>2026-04-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://seven2.pages.dev/group.html</loc><lastmod>2026-04-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url>
+    <loc>https://seven2.pages.dev/guide.html</loc>
+    <lastmod>2026-04-28T02:58:37.854Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://seven2.pages.dev/og-guide.png</image:loc>
+      <image:title>대전세븐나이트 완벽 가이드</image:title>
+      <image:caption>위치·시스템·부킹 전부 정리</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://seven2.pages.dev/reviews.html</loc>
+    <lastmod>2026-04-28T02:58:37.854Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://seven2.pages.dev/og-reviews.png</image:loc>
+      <image:title>대전세븐나이트 후기 모음</image:title>
+      <image:caption>실제 방문자 1,287건 평점 4.9</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://seven2.pages.dev/price.html</loc>
+    <lastmod>2026-04-28T02:58:37.854Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://seven2.pages.dev/og-price.png</image:loc>
+      <image:title>대전세븐나이트 가격 안내</image:title>
+      <image:caption>정찰제 운영 바가지 없음</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://seven2.pages.dev/faq.html</loc>
+    <lastmod>2026-04-28T02:58:37.854Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://seven2.pages.dev/og-faq.png</image:loc>
+      <image:title>대전세븐나이트 FAQ 30선</image:title>
+      <image:caption>예약 전 자주 묻는 질문</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://seven2.pages.dev/hoesik-2cha.html</loc>
+    <lastmod>2026-04-28T02:58:37.854Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://seven2.pages.dev/og-hoesik.png</image:loc>
+      <image:title>대전 회식 2차 추천</image:title>
+      <image:caption>둔산동 직장인 회식 정답</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://seven2.pages.dev/birthday.html</loc>
+    <lastmod>2026-04-28T02:58:37.854Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://seven2.pages.dev/og-birthday.png</image:loc>
+      <image:title>대전 생일파티 장소</image:title>
+      <image:caption>VIP룸 + 케이크 세팅</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://seven2.pages.dev/first-visit.html</loc>
+    <lastmod>2026-04-28T02:58:37.854Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://seven2.pages.dev/og-first.png</image:loc>
+      <image:title>대전 나이트 처음 가는 법</image:title>
+      <image:caption>초보자 5단계 가이드</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://seven2.pages.dev/group.html</loc>
+    <lastmod>2026-04-28T02:58:37.854Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://seven2.pages.dev/og-group.png</image:loc>
+      <image:title>대전 단체 모임 장소</image:title>
+      <image:caption>VIP룸 8~20인</image:caption>
+    </image:image>
+  </url>
 </urlset>
