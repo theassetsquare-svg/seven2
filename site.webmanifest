@@ -1,0 +1,24 @@
+{
+  "name": "대전세븐나이트 W.T 원숭이",
+  "short_name": "세븐나이트",
+  "description": "대전세븐나이트 4인1조 W.T 원숭이 010-3242-1504 둔산동 No.1 부킹",
+  "start_url": "/seven2/",
+  "scope": "/seven2/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0a0a0a",
+  "theme_color": "#ff2d55",
+  "lang": "ko-KR",
+  "icons": [
+    { "src": "/seven2/favicon.svg", "sizes": "any", "type": "image/svg+xml" },
+    { "src": "/seven2/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ],
+  "shortcuts": [
+    {
+      "name": "전화 예약",
+      "short_name": "전화",
+      "url": "tel:01032421504",
+      "description": "010-3242-1504 W.T 원숭이"
+    }
+  ]
+}
