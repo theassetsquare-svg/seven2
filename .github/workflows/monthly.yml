@@ -25,6 +25,9 @@ jobs:
       - name: 시즌 콘텐츠 생성
         run: node _tools/generate-monthly.mjs
 
+      - name: 자동 캐시 무효화 (모든 HTML 자산 ?v=HASH)
+        run: node _tools/cache-bust.mjs
+
       - name: IndexNow ping (Bing/Naver/Yandex 즉시 통지)
         run: node _tools/indexnow.mjs
 

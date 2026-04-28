@@ -1,0 +1,48 @@
+name: 자동 캐시 무효화
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'style.css'
+      - 'main.js'
+      - 'og-*.png'
+      - '*.html'
+      # 무한 루프 방지 — 워크플로 자체 변경은 트리거 X
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# 동시 실행 방지
+concurrency:
+  group: cache-bust
+  cancel-in-progress: false
+
+jobs:
+  bust:
+    runs-on: ubuntu-latest
+    # 봇 자기 커밋은 스킵 (무한 루프 방지)
+    if: github.event.head_commit.author.email != '41898282+github-actions[bot]@users.noreply.github.com'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+
+      - name: 캐시버스팅 실행
+        run: node _tools/cache-bust.mjs
+
+      - name: 변경 시 자동 커밋
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A '*.html'
+          if git diff --staged --quiet; then
+            echo "변경 없음 — 모든 자산 이미 최신 버전"
+          else
+            git commit -m "auto: 자산 캐시버스팅 ($(git rev-parse --short HEAD~0))"
+            git push
+          fi
