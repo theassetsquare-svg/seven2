@@ -1,0 +1,54 @@
+name: 일간 SEO 감사 + 자동 보정
+
+on:
+  schedule:
+    # 매일 KST 04:00 (UTC 19:00) — 트래픽 가장 적은 시간
+    - cron: '0 19 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-audit
+  cancel-in-progress: false
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    # 봇 자기 커밋은 스킵 (루프 방지)
+    if: github.event.head_commit.author.email != '41898282+github-actions[bot]@users.noreply.github.com'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+
+      - name: 10-pass 감사 (실패 시 워크플로 실패)
+        run: node _tools/audit-10pass.mjs
+
+      - name: 키워드 스터핑 감사 + 자동 분산 처리
+        run: node _tools/destuff.mjs
+
+      - name: 약점 자동 강화 (12개 SEO 패치)
+        run: node _tools/strengthen.mjs || true
+
+      - name: 캐시 무효화 (HTML이 변경됐을 때만)
+        run: node _tools/cache-bust.mjs
+
+      - name: IndexNow ping (Bing/Naver/Yandex 즉시 통지)
+        run: node _tools/indexnow.mjs || true
+
+      - name: 변경 시 자동 커밋·푸시
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --staged --quiet; then
+            echo "변경 없음 — 모든 페이지 이미 최적 상태"
+          else
+            git commit -m "auto: 일간 SEO 감사 자동 보정 $(date -u +%Y-%m-%d)"
+            git push
+          fi
