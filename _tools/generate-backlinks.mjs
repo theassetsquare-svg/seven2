@@ -53,7 +53,7 @@ const HASHTAGS = [
   '#대전나이트추천 #대전부킹1등 #4인1조 #대전여친선물'
 ];
 
-const PHONE = '010-3242-1504';
+const PHONE = '';
 const URL = 'https://theassetsquare-svg.github.io/seven2/';
 
 function pick(arr) { return arr[Math.floor(Math.random() * arr.length)]; }

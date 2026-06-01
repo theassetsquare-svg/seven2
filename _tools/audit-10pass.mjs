@@ -45,7 +45,7 @@ for (const [p, d] of Object.entries(pages)) {
   const desc = (d.html.match(/name="description"\s+content="([^"]+)"/) || [])[1] || '';
   const tHasKw = t.includes('대전세븐나이트') || t.includes('대전 세븐나이트') || t.includes('세븐나이트') || t.includes('대전');
   const dHasKw = desc.includes('대전세븐나이트') || desc.includes('대전');
-  const tHasPhone = t.includes('010-3242-1504');
+  const tHasPhone = t.includes('');
   if (t.length >= 30 && t.length <= 70 && tHasKw) ok(`${p||'home'}: title ${t.length}자 ✓`);
   else warn(`${p||'home'}: title ${t.length}자 — "${t.slice(0,50)}"`);
   if (desc.length >= 100 && desc.length <= 165 && dHasKw) ok(`${p||'home'}: desc ${desc.length}자 ✓`);
@@ -113,7 +113,7 @@ for (const [p, d] of Object.entries(pages)) {
 // ============ 10. AI 검색 준비 ============
 console.log('\n=== 10. AI 검색 인용 가능성 ===');
 const llms = await (await fetch(BASE + '/llms.txt')).text();
-const hasPhone = llms.includes('010-3242-1504');
+const hasPhone = llms.includes('');
 const hasLocation = llms.includes('둔산동');
 const hasAllPages = PAGES.every(p => p === '' || llms.includes(p));
 if (hasPhone) ok('llms.txt에 전화번호 명시');

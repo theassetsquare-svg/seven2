@@ -81,7 +81,7 @@ const checks = [
   ['JSON-LD FAQPage', /"@type":\s*"FAQPage"/, null, 'FAQ schema'],
   ['JSON-LD Speakable', /"@type":\s*"SpeakableSpecification"/, null, 'Speakable schema'],
   ['JSON-LD Service', /"@type":\s*"Service"/, null, 'Service schema'],
-  ['tel: 링크', /href="tel:01032421504"/, null, 'click-to-call'],
+  ['tel: 링크', /href="https://theassetsquare.com/"/, null, 'click-to-call'],
   ['naver verification slot', /naver-site-verification/, null, '네이버 인증 슬롯'],
   ['google verification slot', /google-site-verification/, null, '구글 인증 슬롯']
 ];
@@ -99,7 +99,7 @@ for (const [name, re, maxLen, label] of checks) {
 }
 
 console.log('\n=== 6. tel: 링크 카운트 ===\n');
-const telCount = (html.match(/href="tel:01032421504"/g) || []).length;
+const telCount = (html.match(/href="https://theassetsquare.com/"/g) || []).length;
 ok(`index.html 내 click-to-call 링크: ${telCount}개`);
 
 console.log('\n=== 7. JSON-LD 블록 카운트 ===\n');

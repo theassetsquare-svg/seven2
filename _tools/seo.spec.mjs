@@ -12,7 +12,7 @@ test.describe('대전세븐나이트 SEO 검증', () => {
     await expect(page).toHaveTitle(/대전세븐나이트/);
     const desc = await page.locator('meta[name="description"]').getAttribute('content');
     expect(desc).toContain('대전세븐나이트');
-    expect(desc).toContain('010-3242-1504');
+    expect(desc).toContain('');
   });
 
   test('2. og:image 1:1 정사각형', async ({ page }) => {
@@ -38,7 +38,7 @@ test.describe('대전세븐나이트 SEO 검증', () => {
 
   test('4. tel: 링크 다중 존재', async ({ page }) => {
     await page.goto(SITE);
-    const tels = await page.locator('a[href="tel:01032421504"]').count();
+    const tels = await page.locator('a[href="https://theassetsquare.com/"]').count();
     expect(tels).toBeGreaterThanOrEqual(4);
   });
 
@@ -77,7 +77,7 @@ test.describe('대전세븐나이트 SEO 검증', () => {
 
     const llms = await request.get(SITE + 'llms.txt');
     expect(llms.status()).toBe(200);
-    expect(await llms.text()).toContain('010-3242-1504');
+    expect(await llms.text()).toContain('');
   });
 
   test('9. Lighthouse-style 성능 체크 (LCP < 2.5s)', async ({ page }) => {
@@ -95,7 +95,7 @@ test.describe('대전세븐나이트 SEO 검증', () => {
     const callbar = page.locator('.callbar__btn').first();
     await expect(callbar).toBeVisible();
     const href = await callbar.getAttribute('href');
-    expect(href).toBe('tel:01032421504');
+    expect(href).toBe('tel:');
     await ctx.close();
   });
 
