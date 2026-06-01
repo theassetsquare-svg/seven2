@@ -31,8 +31,8 @@ const html = `<!doctype html>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>${s.h1} ${Y}년 ${M}월 - 둔산동 세븐나이트 W.T 원숭이 </title>
-  <meta name="description" content="${Y}년 ${M}월 ${s.h1}. ${s.kw} 둔산동 세븐나이트가 정답. 4인1조 부킹 즉시 세팅. W.T 원숭이 ." />
+  <title>${s.h1} ${Y}년 ${M}월 - 둔산동 세븐나이트 W.T 원숭이 010-3242-1504</title>
+  <meta name="description" content="${Y}년 ${M}월 ${s.h1}. ${s.kw} 둔산동 세븐나이트가 정답. 4인1조 부킹 즉시 세팅. W.T 원숭이 010-3242-1504." />
   <meta name="keywords" content="${s.kw}, 대전세븐나이트, 둔산동나이트, 대전 ${M}월 모임, ${s.kw} 추천, ${Y}년 대전" />
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta name="naverbot" content="index, follow" />
@@ -55,9 +55,9 @@ const html = `<!doctype html>
 </head>
 <body>
   <div class="callbar">
-    <a href="https://theassetsquare.com/" class="callbar__btn">
+    <a href="tel:01032421504" class="callbar__btn">
       <span class="callbar__pulse"></span>
-      ☎  · ${s.h1} 즉시 예약
+      ☎ 010-3242-1504 · ${s.h1} 즉시 예약
     </a>
   </div>
 
@@ -94,11 +94,11 @@ const html = `<!doctype html>
 
       <h2>예약 방법</h2>
       <p>
-        <strong>전화 한 통 끝</strong>: . 인원·도착 시각만 알려주세요.
+        <strong>전화 한 통 끝</strong>: 010-3242-1504. 인원·도착 시각만 알려주세요.
       </p>
 
       <p style="text-align:center;margin-top:40px">
-        <a href="https://theassetsquare.com/" class="btn btn--primary btn--xl">☎ </a>
+        <a href="tel:01032421504" class="btn btn--primary btn--xl">☎ 010-3242-1504</a>
       </p>
 
       <h2>관련 페이지</h2>
@@ -112,7 +112,7 @@ const html = `<!doctype html>
   </main>
 
   <footer class="footer">
-    <p><strong>대전세븐나이트 · W.T 원숭이</strong> · <a href="https://theassetsquare.com/"></a></p>
+    <p><strong>대전세븐나이트 · W.T 원숭이</strong> · <a href="tel:01032421504">010-3242-1504</a></p>
     <p class="footer__legal">⚠ 만 19세 이상 이용. 청소년 출입·고용 금지.</p>
   </footer>
 </body>

@@ -22,7 +22,7 @@ const ANALYTICS = `
     document.addEventListener('DOMContentLoaded', function(){
       document.querySelectorAll('a[href^="tel:"]').forEach(function(a){
         a.addEventListener('click', function(){
-          gtag('event', 'phone_call', { 'phone_number': '' });
+          gtag('event', 'phone_call', { 'phone_number': '01032421504' });
         });
       });
     });
