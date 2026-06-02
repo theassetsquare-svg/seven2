@@ -4,7 +4,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://seven2.pages.dev/</loc>
-    <lastmod>2026-04-28T02:58:37.854Z</lastmod>
+    <lastmod>2026-06-02T16:07:18.413Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -15,7 +15,7 @@
   </url>
   <url>
     <loc>https://seven2.pages.dev/guide.html</loc>
-    <lastmod>2026-04-28T02:58:37.854Z</lastmod>
+    <lastmod>2026-06-02T16:07:18.413Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -26,7 +26,7 @@
   </url>
   <url>
     <loc>https://seven2.pages.dev/reviews.html</loc>
-    <lastmod>2026-04-28T02:58:37.854Z</lastmod>
+    <lastmod>2026-06-02T16:07:18.413Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -37,7 +37,7 @@
   </url>
   <url>
     <loc>https://seven2.pages.dev/price.html</loc>
-    <lastmod>2026-04-28T02:58:37.854Z</lastmod>
+    <lastmod>2026-06-02T16:07:18.413Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -48,7 +48,7 @@
   </url>
   <url>
     <loc>https://seven2.pages.dev/faq.html</loc>
-    <lastmod>2026-04-28T02:58:37.854Z</lastmod>
+    <lastmod>2026-06-02T16:07:18.413Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -59,7 +59,7 @@
   </url>
   <url>
     <loc>https://seven2.pages.dev/hoesik-2cha.html</loc>
-    <lastmod>2026-04-28T02:58:37.854Z</lastmod>
+    <lastmod>2026-06-02T16:07:18.413Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -70,7 +70,7 @@
   </url>
   <url>
     <loc>https://seven2.pages.dev/birthday.html</loc>
-    <lastmod>2026-04-28T02:58:37.854Z</lastmod>
+    <lastmod>2026-06-02T16:07:18.413Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -81,7 +81,7 @@
   </url>
   <url>
     <loc>https://seven2.pages.dev/first-visit.html</loc>
-    <lastmod>2026-04-28T02:58:37.854Z</lastmod>
+    <lastmod>2026-06-02T16:07:18.413Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -92,7 +92,7 @@
   </url>
   <url>
     <loc>https://seven2.pages.dev/group.html</loc>
-    <lastmod>2026-04-28T02:58:37.854Z</lastmod>
+    <lastmod>2026-06-02T16:07:18.413Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -101,6 +101,26 @@
       <image:caption>VIP룸 8~20인</image:caption>
     </image:image>
   </url>
-  <url><loc>https://theassetsquare-svg.github.io/seven2/season-2026-05.html</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://theassetsquare-svg.github.io/seven2/season-2026-06.html</loc><lastmod>2026-06-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url>
+    <loc>https://seven2.pages.dev/season-2026-05.html</loc>
+    <lastmod>2026-06-02T16:07:18.413Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://seven2.pages.dev/og-home.png</image:loc>
+      <image:title>5월 가족 모임 2026년 5월 · 대전세븐나이트</image:title>
+      <image:caption>둔산동 시즌 모임 4인1조 부킹</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://seven2.pages.dev/season-2026-06.html</loc>
+    <lastmod>2026-06-02T16:07:18.413Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://seven2.pages.dev/og-home.png</image:loc>
+      <image:title>대전 여름밤 2026년 6월 · 대전세븐나이트</image:title>
+      <image:caption>둔산동 시즌 모임 4인1조 부킹</image:caption>
+    </image:image>
+  </url>
 </urlset>

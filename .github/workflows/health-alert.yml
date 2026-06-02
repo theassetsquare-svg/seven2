@@ -1,0 +1,68 @@
+name: 헬스체크 + 이메일 알림
+
+on:
+  schedule:
+    # 6시간마다
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: health-alert
+  cancel-in-progress: true
+
+jobs:
+  health:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 전 페이지 200 + 홈 키워드 노출 체크
+        id: check
+        run: |
+          BASE="https://seven2.pages.dev"
+          FAIL=""
+          # sitemap의 모든 URL 추출
+          URLS=$(curl -sL "$BASE/sitemap.xml" | grep -oP '(?<=<loc>)[^<]+')
+          for u in $URLS; do
+            code=$(curl -s -o /dev/null -w "%{http_code}" -L "$u")
+            echo "$code  $u"
+            if [ "$code" != "200" ]; then FAIL="$FAIL\n$code $u"; fi
+          done
+          # robots / llms 추가 체크
+          for p in robots.txt llms.txt; do
+            code=$(curl -s -o /dev/null -w "%{http_code}" -L "$BASE/$p")
+            echo "$code  $BASE/$p"
+            if [ "$code" != "200" ]; then FAIL="$FAIL\n$code $BASE/$p"; fi
+          done
+          # 홈 키워드 노출
+          KW=$(curl -sL "$BASE/" | grep -c "대전세븐나이트" || true)
+          echo "홈 대전세븐나이트 노출: ${KW}회"
+          if [ "$KW" -lt 1 ]; then FAIL="$FAIL\n홈에 대전세븐나이트 키워드 0회"; fi
+
+          if [ -n "$FAIL" ]; then
+            echo "failed=true" >> "$GITHUB_OUTPUT"
+            echo -e "detail<<EOF\n$FAIL\nEOF" >> "$GITHUB_OUTPUT"
+          else
+            echo "failed=false" >> "$GITHUB_OUTPUT"
+            echo "✓ 전 페이지 정상 + 홈 키워드 노출"
+          fi
+
+      - name: 실패 시 Resend 이메일 알림
+        if: steps.check.outputs.failed == 'true'
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+        run: |
+          if [ -z "$RESEND_API_KEY" ]; then
+            echo "RESEND_API_KEY 미설정 — 알림 생략 (워크플로는 실패 처리)"
+          else
+            BODY=$(printf '대전세븐나이트 사이트 헬스체크 실패:\n%b' "${{ steps.check.outputs.detail }}")
+            curl -s -X POST "https://api.resend.com/emails" \
+              -H "Authorization: Bearer $RESEND_API_KEY" \
+              -H "Content-Type: application/json" \
+              -d "$(jq -n --arg t "$BODY" '{from:"SEO Monitor <onboarding@resend.dev>",to:["theassetsquare@gmail.com"],subject:"⚠ 대전세븐나이트 사이트 이상 감지",text:$t}')"
+          fi
+          echo "::error::헬스체크 실패 — 위 상세 참조"
+          exit 1

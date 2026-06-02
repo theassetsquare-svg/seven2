@@ -1,0 +1,47 @@
+name: SEO 자동화 (sitemap + IndexNow)
+
+on:
+  schedule:
+    # 매일 한국시간 12:00 (UTC 03:00)
+    - cron: '0 3 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: seo-auto
+  cancel-in-progress: false
+
+jobs:
+  seo:
+    runs-on: ubuntu-latest
+    # 봇 자기 커밋은 스킵 (루프 방지)
+    if: github.event.head_commit.author.email != '41898282+github-actions[bot]@users.noreply.github.com'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+
+      - name: sitemap.xml 갱신 (lastmod 오늘 + 시즌 자동 포함)
+        run: node _tools/build-sitemap.mjs
+
+      - name: IndexNow 전 페이지 푸시 (Bing/Naver/Yandex 즉시 색인)
+        env:
+          INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+        run: node _tools/indexnow.mjs || true
+
+      - name: 변경 시 자동 커밋·푸시
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A sitemap.xml
+          if git diff --staged --quiet; then
+            echo "sitemap 변경 없음"
+          else
+            git commit -m "auto: sitemap lastmod 갱신 + IndexNow 푸시 $(date -u +%Y-%m-%d)"
+            git push
+          fi

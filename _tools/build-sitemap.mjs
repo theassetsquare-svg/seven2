@@ -26,6 +26,14 @@ const PAGES = [
     title: '대전 단체 모임 장소',         caption: 'VIP룸 8~20인' }
 ];
 
+// 시즌 콘텐츠(season-YYYY-MM.html) 자동 포함 — 단일 소스 유지 (도메인 일관성)
+for (const f of fs.readdirSync('.').filter(n => /^season-\d{4}-\d{2}\.html$/.test(n)).sort()) {
+  const h = fs.readFileSync(f, 'utf-8');
+  const title = (h.match(/<title>([^<]+)<\/title>/) || [])[1]?.split(' - ')[0]?.trim() || f;
+  PAGES.push({ loc: `/${f}`, img: 'og-home.png', priority: '0.7', freq: 'monthly',
+    title: `${title} · 대전세븐나이트`, caption: '둔산동 시즌 모임 4인1조 부킹' });
+}
+
 const xml = [];
 xml.push('<?xml version="1.0" encoding="UTF-8"?>');
 xml.push('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"');

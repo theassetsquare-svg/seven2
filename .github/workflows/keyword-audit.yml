@@ -1,0 +1,42 @@
+name: 키워드 감사 (밀도 + 카니발)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '*.html'
+      - 'scripts/**'
+  schedule:
+    # 매일 한국시간 05:00 (UTC 20:00)
+    - cron: '0 20 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with: { node-version: 24 }
+
+      - name: 키워드 밀도 (1.5~2.5%)
+        run: node scripts/keyword-density.js "대전세븐나이트" | tee density.txt
+
+      - name: 카니발리제이션 점검
+        run: node scripts/cannibalization.js "대전세븐나이트" | tee cannibal.txt
+
+      - name: 스터핑·카니발 발생 시 실패
+        run: |
+          if grep -q "\[STUFF\]" density.txt; then
+            echo "::error::키워드 스터핑(2.5% 초과) 페이지 발견"
+            exit 1
+          fi
+          if grep -q "차별화 필요" cannibal.txt; then
+            echo "::error::타이틀 카니발리제이션 발견"
+            exit 1
+          fi
+          echo "✓ 스터핑 0건 · 카니발 0건"

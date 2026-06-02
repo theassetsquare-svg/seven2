@@ -58,7 +58,9 @@ for (const [file, inj] of Object.entries(KW_INJECTIONS)) {
   // hero__sub 보강 (페이지마다 한 번만 등장)
   html = html.replace(/<p class="hero__sub">[^<]+<\/p>/, `<p class="hero__sub">${inj.sub}</p>`);
   // lead 첫 등장에 "대전세븐나이트" 추가
-  if (inj.leadAfter && !html.includes(inj.leadAfter + inj.leadAdd)) {
+  // 멱등성: leadAdd가 이후 '둔산동 세븐나이트'→'둔산동 대전세븐나이트' 치환으로 변형되므로
+  // 변형에 영향받지 않는 안정 마커(leadAfter 바로 뒤 ' 대전세븐나이트')로 중복 삽입 차단
+  if (inj.leadAfter && !html.includes(inj.leadAfter + ' 대전세븐나이트')) {
     html = html.replace(inj.leadAfter, inj.leadAfter + inj.leadAdd);
   }
   // 추가 보강: 본문 어딘가 한 번 더 키워드 자연 삽입

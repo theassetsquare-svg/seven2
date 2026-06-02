@@ -1,120 +1,93 @@
-// 키워드 디스터핑 — "대전세븐나이트" 과밀 페이지의 일부를 의미 동등 변형으로 교체
-// 전략적 위치(title/h1/lead/footer)는 보존, 본문 중간만 교체
+// 키워드 디스터핑 — 가시 본문 밀도(keyword-density.js와 동일 기준)가 2.5%를 초과하는
+// 페이지만 자동 보정. title/h1/JSON-LD/meta/nav/footer 보호, lead 첫 등장 1회 보존,
+// 그 외 본문 중간 등장을 의미 동등 변형으로 교체해 ~2.3%까지 낮춘다.
 import fs from 'fs';
+import path from 'path';
 
-// 페이지별 목표 등장 횟수
-const TARGET = {
-  'index.html':       { current: 32, keep: 15 },  // 2.79% → ~1.3%
-  'guide.html':       { current: 22, keep: 13 },  // 3.22% → ~2.0%
-  'reviews.html':     { current: 12, keep:  7 },  // 3.17% → ~1.8%
-  'price.html':       { current:  9, keep:  5 },  // 3.64% → ~2.0%
-  // faq, hoesik, birthday, first, group은 이미 자연스러움 — 건드리지 않음
-};
+const KW = '대전세븐나이트';
+const STUFF = 2.5;   // 초과 시 보정
+const TARGET = 2.3;  // 보정 후 목표 상한
 
-// 의미 동등 변형 풀 (구글 BERT/네이버 DIA가 동일 의미로 인식)
-const VARIATIONS = [
-  '세븐나이트',
-  '둔산동 세븐나이트',
-  '대전 세븐나이트',
-  '저희',
-  '본 매장',
-  '여기',
-  '둔산동 No.1 나이트',
-];
+// 의미 동등 변형 (구글 BERT/네이버 DIA가 동일 의미로 인식)
+const VARIATIONS = ['세븐나이트', '둔산동 세븐나이트', '저희 매장', '저희', '본 매장', '여기'];
 
-let varIdx = 0;
-function pickVar() {
-  const v = VARIATIONS[varIdx % VARIATIONS.length];
-  varIdx++;
-  return v;
+function walk(d, a = []) {
+  for (const f of fs.readdirSync(d)) {
+    const p = path.join(d, f);
+    if (fs.statSync(p).isDirectory()) {
+      if (!p.includes('node_modules') && !p.includes('.git')) walk(p, a);
+    } else if (f.endsWith('.html')) a.push(p);
+  }
+  return a;
 }
 
-function destuff(file, current, keep) {
+// keyword-density.js와 동일한 가시 텍스트 추출 + 밀도 계산
+function density(html) {
+  const text = html
+    .replace(/<nav[\s\S]*?<\/nav>/gi, '')
+    .replace(/<footer[\s\S]*?<\/footer>/gi, '')
+    .replace(/<script[\s\S]*?<\/script>/gi, '')
+    .replace(/<style[\s\S]*?<\/style>/gi, '')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+  const c = (text.match(new RegExp(KW, 'g')) || []).length;
+  const d = text.length ? (c * KW.length / text.length * 100) : 0;
+  return { c, d };
+}
+
+function destuff(file) {
   let html = fs.readFileSync(file, 'utf-8');
+  const before = density(html);
+  if (before.d <= STUFF) {
+    return { file, changed: false, ...before };
+  }
 
-  // 1. JSON-LD, title, h1, footer__seo (aria-hidden 키워드 풀) 영역은 보호
-  // → 임시 토큰으로 치환 후 마지막에 복원
+  // 보호 영역(title/h1/JSON-LD/meta/nav/footer)을 토큰으로 치환
   const protectedRegions = [];
-  const protectKw = '대전세븐나이트';
-  const TOKEN = 'PROTECTED';
+  const protect = (re) => {
+    html = html.replace(re, m => {
+      protectedRegions.push(m);
+      return `<!--P${protectedRegions.length - 1}-->`;
+    });
+  };
+  protect(/<script[\s\S]*?<\/script>/gi);
+  protect(/<title>[\s\S]*?<\/title>/gi);
+  protect(/<h1[\s\S]*?<\/h1>/gi);
+  protect(/<nav[\s\S]*?<\/nav>/gi);
+  protect(/<footer[\s\S]*?<\/footer>/gi);
+  protect(/<meta[^>]*>/gi);
 
-  // JSON-LD scripts 보호
-  html = html.replace(/<script[^>]*type="application\/ld\+json"[^>]*>[\s\S]*?<\/script>/g, m => {
-    protectedRegions.push(m);
-    return `<!--PROTECT-${protectedRegions.length - 1}-->`;
-  });
-  // title 보호
-  html = html.replace(/<title>[\s\S]*?<\/title>/g, m => {
-    protectedRegions.push(m);
-    return `<!--PROTECT-${protectedRegions.length - 1}-->`;
-  });
-  // h1 보호
-  html = html.replace(/<h1[^>]*>[\s\S]*?<\/h1>/g, m => {
-    protectedRegions.push(m);
-    return `<!--PROTECT-${protectedRegions.length - 1}-->`;
-  });
-  // meta 태그 안의 키워드 (description, keywords, og 등) 보호
-  html = html.replace(/<meta[^>]+content="[^"]*대전세븐나이트[^"]*"[^>]*\/?>/g, m => {
-    protectedRegions.push(m);
-    return `<!--PROTECT-${protectedRegions.length - 1}-->`;
-  });
-  // footer__seo (이미 aria-hidden) 보호 — 키워드 풀이므로
-  html = html.replace(/<p class="footer__seo"[^>]*>[\s\S]*?<\/p>/g, m => {
-    protectedRegions.push(m);
-    return `<!--PROTECT-${protectedRegions.length - 1}-->`;
-  });
-
-  // 2. 보호 영역 외 본문에서 "대전세븐나이트" 등장 횟수 카운트
-  const bodyMatches = (html.match(/대전세븐나이트/g) || []).length;
-  console.log(`  ${file} (보호 후 본문): ${bodyMatches}회`);
-
-  // 3. 교체할 횟수 = 본문 횟수 - 본문에서 유지할 횟수
-  // 전체 keep에서 보호 영역의 등장 횟수를 빼야 정확하지만, 단순화
-  const toReplace = Math.max(0, bodyMatches - (keep - (current - bodyMatches)));
-  console.log(`  ${file} 교체 대상: ${toReplace}회`);
-
-  // 4. 본문에서 N회 등장한 매치를 순서대로 교체 (전부 다는 안 함)
+  // 본문 키워드 위치 수집, 첫 등장(lead)은 보존하고 뒤에서부터 교체
+  let varIdx = 0;
   let replaced = 0;
-  // 첫 등장부터가 아니라, 첫 1~2개는 보존(intro), 끝쪽 1개도 보존(CTA)
-  // 가운데 부분만 교체
-  const positions = [];
-  const re = /대전세븐나이트/g;
-  let m;
-  while ((m = re.exec(html)) !== null) {
-    positions.push(m.index);
-  }
-  // 첫 2개와 마지막 1개는 보호
-  const middleStart = 2;
-  const middleEnd = positions.length - 1;
-  // 가운데에서 toReplace만큼 균등 추출
-  const toReplaceIndices = [];
-  if (middleEnd > middleStart && toReplace > 0) {
-    const step = Math.max(1, Math.floor((middleEnd - middleStart) / toReplace));
-    for (let i = middleStart; i < middleEnd && toReplaceIndices.length < toReplace; i += step) {
-      toReplaceIndices.push(positions[i]);
-    }
-  }
+  while (true) {
+    const restored = html.replace(/<!--P(\d+)-->/g, (_, i) => protectedRegions[+i]);
+    if (density(restored).d <= TARGET) break;
 
-  // 뒤에서부터 교체 (인덱스가 안 밀리도록)
-  toReplaceIndices.sort((a, b) => b - a);
-  for (const idx of toReplaceIndices) {
-    const v = pickVar();
-    html = html.slice(0, idx) + v + html.slice(idx + protectKw.length);
+    const positions = [];
+    const re = new RegExp(KW, 'g');
+    let m;
+    while ((m = re.exec(html)) !== null) positions.push(m.index);
+    if (positions.length <= 1) break; // lead 1회는 항상 보존
+
+    const idx = positions[positions.length - 1]; // 가장 뒤쪽부터 교체
+    const v = VARIATIONS[varIdx++ % VARIATIONS.length];
+    html = html.slice(0, idx) + v + html.slice(idx + KW.length);
     replaced++;
   }
 
-  // 5. 보호 영역 복원
-  html = html.replace(/<!--PROTECT-(\d+)-->/g, (_, i) => protectedRegions[parseInt(i)]);
-
+  html = html.replace(/<!--P(\d+)-->/g, (_, i) => protectedRegions[+i]);
   fs.writeFileSync(file, html);
-
-  // 검증
-  const finalCount = (html.match(/대전세븐나이트/g) || []).length;
-  console.log(`  ${file} 결과: ${finalCount}회 (교체 ${replaced}건)\n`);
-  return finalCount;
+  const after = density(html);
+  return { file, changed: replaced > 0, replaced, before: before.d, after: after.d };
 }
 
-console.log('=== 키워드 디스터핑 ===\n');
-for (const [file, { current, keep }] of Object.entries(TARGET)) {
-  destuff(file, current, keep);
+console.log('=== 키워드 디스터핑 (가시 밀도 2.5% 초과만) ===');
+for (const file of walk('.')) {
+  const r = destuff(file);
+  if (r.changed) {
+    console.log(`✓ ${r.file}: ${r.before.toFixed(2)}% → ${r.after.toFixed(2)}% (${r.replaced}회 분산)`);
+  }
 }
+console.log('완료 — 2.5% 이하 페이지는 보존');

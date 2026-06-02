@@ -24,6 +24,7 @@ const SEASONS = {
 
 const s = SEASONS[M];
 const fileName = `season-${Y}-${String(M).padStart(2,'0')}.html`;
+const HOST = 'https://seven2.pages.dev';
 
 // 페이지 템플릿
 const html = `<!doctype html>
@@ -32,25 +33,34 @@ const html = `<!doctype html>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>${s.h1} ${Y}년 ${M}월 - 둔산동 세븐나이트 W.T 원숭이 010-3242-1504</title>
-  <meta name="description" content="${Y}년 ${M}월 ${s.h1}. ${s.kw} 둔산동 세븐나이트가 정답. 4인1조 부킹 즉시 세팅. W.T 원숭이 010-3242-1504." />
+  <meta name="description" content="${Y}년 ${M}월 ${s.h1}. ${s.kw} 모임은 둔산동 대전세븐나이트가 정답. 4인1조 부킹 즉시 세팅. W.T 원숭이 010-3242-1504." />
   <meta name="keywords" content="${s.kw}, 대전세븐나이트, 둔산동나이트, 대전 ${M}월 모임, ${s.kw} 추천, ${Y}년 대전" />
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta name="naverbot" content="index, follow" />
   <meta name="yeti" content="index, follow" />
-  <link rel="canonical" href="https://theassetsquare-svg.github.io/seven2/${fileName}" />
+  <meta name="geo.region" content="KR-30" />
+  <meta name="geo.placename" content="대전광역시 서구 둔산동" />
+  <meta name="geo.position" content="36.3504;127.3845" />
+  <link rel="canonical" href="${HOST}/${fileName}" />
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="${s.h1} ${Y}년 ${M}월 - 둔산동 세븐나이트" />
-  <meta property="og:description" content="${s.kw} 둔산동 세븐나이트. 4인1조 부킹." />
-  <meta property="og:url" content="https://theassetsquare-svg.github.io/seven2/${fileName}" />
-  <meta property="og:image" content="https://theassetsquare-svg.github.io/seven2/og-home.png" />
+  <meta property="og:title" content="${s.h1} ${Y}년 ${M}월 - 둔산동 대전세븐나이트" />
+  <meta property="og:description" content="${s.kw}, 둔산동 대전세븐나이트 4인1조 부킹 즉시 세팅." />
+  <meta property="og:url" content="${HOST}/${fileName}" />
+  <meta property="og:image" content="${HOST}/og-home.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="1200" />
   <meta property="og:locale" content="ko_KR" />
-  <meta name="thumbnail" content="https://theassetsquare-svg.github.io/seven2/og-home.png" />
-  <link rel="stylesheet" href="/seven2/style.css" />
+  <meta property="og:site_name" content="대전세븐나이트 W.T 원숭이" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="${HOST}/og-home.png" />
+  <meta name="thumbnail" content="${HOST}/og-home.png" />
+  <link rel="stylesheet" href="style.css" />
 
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Article","headline":"${s.h1} ${Y}년 ${M}월","author":{"@type":"Person","name":"W.T 원숭이"},"datePublished":"${Y}-${String(M).padStart(2,'0')}-01","dateModified":"${now.toISOString().slice(0,10)}","image":"https://theassetsquare-svg.github.io/seven2/og-home.png","mainEntityOfPage":"https://theassetsquare-svg.github.io/seven2/${fileName}","inLanguage":"ko-KR"}
+  {"@context":"https://schema.org","@type":"Article","headline":"${s.h1} ${Y}년 ${M}월 - 대전세븐나이트","author":{"@type":"Person","name":"W.T 원숭이"},"publisher":{"@type":"Organization","name":"대전세븐나이트 W.T 원숭이"},"datePublished":"${Y}-${String(M).padStart(2,'0')}-01","dateModified":"${now.toISOString().slice(0,10)}","image":"${HOST}/og-home.png","mainEntityOfPage":"${HOST}/${fileName}","inLanguage":"ko-KR"}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"${HOST}/"},{"@type":"ListItem","position":2,"name":"${s.h1}","item":"${HOST}/${fileName}"}]}
   </script>
 </head>
 <body>
@@ -63,15 +73,15 @@ const html = `<!doctype html>
 
   <header class="hero">
     <nav class="nav">
-      <a href="/seven2/">홈</a>
-      <a href="/seven2/guide.html">가이드</a>
-      <a href="/seven2/reviews.html">후기</a>
-      <a href="/seven2/price.html">가격</a>
-      <a href="/seven2/faq.html">FAQ</a>
+      <a href="./">홈</a>
+      <a href="guide.html">가이드</a>
+      <a href="reviews.html">후기</a>
+      <a href="price.html">가격</a>
+      <a href="faq.html">FAQ</a>
     </nav>
     <div class="hero__inner">
       <p class="hero__eyebrow">${s.eyebrow} · ${Y}년 ${M}월</p>
-      <h1 class="hero__title">${s.h1}<br /><span class="hero__brand">세븐나이트</span></h1>
+      <h1 class="hero__title">${s.h1}<br /><span class="hero__brand">대전세븐나이트</span></h1>
       <p class="hero__sub">${s.sub}. 둔산동 W.T 원숭이가 책임 안내.</p>
     </div>
   </header>
@@ -80,8 +90,13 @@ const html = `<!doctype html>
     <article>
       <h2>${Y}년 ${M}월 ${s.h1}, 어디로?</h2>
       <p class="lead">
-        ${Y}년 ${M}월, ${s.kw}을 찾는 분들께 가장 많이 추천되는 곳. 둔산동 세븐나이트입니다.
-        <strong>4인1조 부킹 라인 우선 배정</strong>으로 자리 빠르게 잡고, 정찰제로 결제도 깔끔합니다.
+        ${Y}년 ${M}월 ${s.kw}, 가장 많이 추천되는 곳은 둔산동 <strong>대전세븐나이트</strong>입니다.
+        4인1조 부킹 라인 우선 배정으로 자리 빠르게 잡고, 정찰제로 결제도 깔끔합니다.
+      </p>
+      <p>
+        저희는 ${s.eyebrow} 분위기에 맞춰 VIP룸·코너석·일반 테이블을 미리 세팅해 둡니다.
+        인원과 도착 시각만 알려주시면 W.T 원숭이가 자리부터 주류·안주까지 준비해 두기 때문에,
+        도착하자마자 바로 모임을 시작할 수 있습니다. 처음 오시는 분도 입장부터 부킹 라인까지 끝까지 안내받습니다.
       </p>
 
       <h2>${s.h1} 추천 이유</h2>
@@ -103,10 +118,10 @@ const html = `<!doctype html>
 
       <h2>관련 페이지</h2>
       <ul>
-        <li><a href="/seven2/hoesik-2cha.html">대전 회식 2차</a></li>
-        <li><a href="/seven2/birthday.html">생일파티 VIP룸</a></li>
-        <li><a href="/seven2/group.html">단체 모임 8~20인</a></li>
-        <li><a href="/seven2/first-visit.html">처음 방문 가이드</a></li>
+        <li><a href="hoesik-2cha.html">대전 회식 2차</a></li>
+        <li><a href="birthday.html">생일파티 VIP룸</a></li>
+        <li><a href="group.html">단체 모임 8~20인</a></li>
+        <li><a href="first-visit.html">처음 방문 가이드</a></li>
       </ul>
     </article>
   </main>
@@ -123,7 +138,7 @@ console.log(`✓ ${fileName} 생성 (${s.kw})`);
 
 // 사이트맵에 추가
 let sm = fs.readFileSync('sitemap.xml', 'utf-8');
-const newEntry = `  <url><loc>https://theassetsquare-svg.github.io/seven2/${fileName}</loc><lastmod>${now.toISOString().slice(0,10)}</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>\n</urlset>`;
+const newEntry = `  <url><loc>${HOST}/${fileName}</loc><lastmod>${now.toISOString().slice(0,10)}</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>\n</urlset>`;
 if (!sm.includes(fileName)) {
   sm = sm.replace('</urlset>', newEntry);
   fs.writeFileSync('sitemap.xml', sm);

@@ -1,0 +1,60 @@
+name: Lighthouse (모바일 + 데스크톱)
+
+on:
+  schedule:
+    # 매일 한국시간 06:00 (UTC 21:00)
+    - cron: '0 21 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    continue-on-error: true   # 점수 리포트용 — 파이프라인 회귀 방지
+    strategy:
+      fail-fast: false
+      matrix:
+        factor: [mobile, desktop]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: LHCI 설정 생성 (${{ matrix.factor }})
+        run: |
+          PRESET=""
+          if [ "${{ matrix.factor }}" = "desktop" ]; then PRESET='"preset":"desktop",'; fi
+          cat > lighthouserc.json <<EOF
+          {
+            "ci": {
+              "collect": {
+                "numberOfRuns": 1,
+                "settings": { ${PRESET}"onlyCategories":["seo","performance","accessibility","best-practices"] },
+                "url": [
+                  "https://seven2.pages.dev/",
+                  "https://seven2.pages.dev/guide.html",
+                  "https://seven2.pages.dev/reviews.html",
+                  "https://seven2.pages.dev/price.html",
+                  "https://seven2.pages.dev/faq.html",
+                  "https://seven2.pages.dev/hoesik-2cha.html",
+                  "https://seven2.pages.dev/birthday.html",
+                  "https://seven2.pages.dev/first-visit.html",
+                  "https://seven2.pages.dev/group.html",
+                  "https://seven2.pages.dev/season-2026-06.html"
+                ]
+              },
+              "assert": {
+                "assertions": {
+                  "categories:seo": ["warn", {"minScore": 0.9}],
+                  "categories:performance": ["warn", {"minScore": 0.8}],
+                  "categories:accessibility": ["warn", {"minScore": 0.9}],
+                  "categories:best-practices": ["warn", {"minScore": 0.9}]
+                }
+              },
+              "upload": { "target": "temporary-public-storage" }
+            }
+          }
+          EOF
+
+      - name: Lighthouse CI 실행
+        run: npx --yes @lhci/cli@0.14.x autorun --config=lighthouserc.json
