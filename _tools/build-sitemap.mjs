@@ -7,7 +7,7 @@ const NOW = new Date().toISOString();
 // 각 페이지 + 페이지별 이미지 + 메타데이터
 const PAGES = [
   { loc: '/',                  img: 'og-home.png',     priority: '1.0', freq: 'daily',
-    title: '대전세븐나이트 W.T 원숭이',  caption: '대전 둔산동 No.1 나이트 4인1조 부킹' },
+    title: '대전세븐나이트 영탁',  caption: '대전 둔산동 No.1 나이트 4인1조 부킹' },
   { loc: '/guide.html',        img: 'og-guide.png',    priority: '0.9', freq: 'weekly',
     title: '대전세븐나이트 완벽 가이드',  caption: '위치·시스템·부킹 전부 정리' },
   { loc: '/reviews.html',      img: 'og-reviews.png',  priority: '0.9', freq: 'weekly',

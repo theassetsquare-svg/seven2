@@ -1,4 +1,4 @@
-/* 대전세븐나이트 W.T 원숭이 — 인터랙션 + 자연체류 보조 */
+/* 대전세븐나이트 영탁 — 인터랙션 + 자연체류 보조 */
 
 (function () {
   'use strict';
@@ -67,7 +67,7 @@
         '<div style="background:#1a0810;border:2px solid #ffd84d;border-radius:16px;max-width:420px;padding:30px;text-align:center;color:#fff">' +
           '<h3 style="margin:0 0 10px;color:#ffd84d;font-size:24px">잠깐!</h3>' +
           '<p style="margin:0 0 20px">대전세븐나이트 자리, 지금 비어있습니다.<br>전화 한 통이면 끝.</p>' +
-          '<a href="tel:01032421504" style="display:block;background:linear-gradient(90deg,#ff2d55,#ff6b00);color:#fff;padding:16px;border-radius:12px;font-weight:900;text-decoration:none;font-size:18px">☎ 010-3242-1504 통화</a>' +
+          '<a href="tel:01077700869" style="display:block;background:linear-gradient(90deg,#ff2d55,#ff6b00);color:#fff;padding:16px;border-radius:12px;font-weight:900;text-decoration:none;font-size:18px">☎ 010-7770-0869 통화</a>' +
           '<button id="seven-close" style="margin-top:14px;background:transparent;color:#999;border:0;cursor:pointer;font-size:14px">닫기</button>' +
         '</div>';
       document.body.appendChild(box);
@@ -90,7 +90,7 @@
   // === 6. 페이지 로드 후 가벼운 페이지뷰 신호 (GA가 있으면) ===
   if (window.gtag) {
     window.gtag('event', 'page_view', {
-      page_title: '대전세븐나이트 원숭이',
+      page_title: '대전세븐나이트 영탁',
       page_path: location.pathname
     });
   }

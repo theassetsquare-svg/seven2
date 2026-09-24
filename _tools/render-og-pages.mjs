@@ -3,15 +3,15 @@ import { Resvg } from '@resvg/resvg-js';
 import fs from 'fs';
 
 const PAGES = [
-  { file: 'og-home',        eyebrow: '대전 둔산동 NO.1',     title: '대전세븐나이트',    sub: '4인1조 W.T 원숭이',     bg1: '#ff2d55', bg2: '#ff6b00', cta: '☎ 010-3242-1504' },
-  { file: 'og-hoesik',      eyebrow: '대전 직장인 회식',      title: '대전 회식 2차',     sub: '둔산동 정답',           bg1: '#0066ff', bg2: '#5b00ff', cta: '☎ 010-3242-1504' },
-  { file: 'og-birthday',    eyebrow: '대전 생일파티',         title: '인생 생일파티',     sub: 'VIP룸 + 케이크 세팅',  bg1: '#ff006e', bg2: '#fb5607', cta: '☎ 010-3242-1504' },
-  { file: 'og-first',       eyebrow: '초보자 가이드',         title: '나이트 처음?',       sub: '걱정마, 다 챙겨드림',  bg1: '#06ffa5', bg2: '#0066ff', cta: '☎ 010-3242-1504' },
-  { file: 'og-group',       eyebrow: '8~20인 단체',          title: '단체 모임',          sub: 'VIP룸 즉시 세팅',       bg1: '#7209b7', bg2: '#3a0ca3', cta: '☎ 010-3242-1504' },
-  { file: 'og-guide',       eyebrow: '완벽 가이드',           title: '대전세븐나이트',    sub: '위치·시스템·부킹',     bg1: '#ffbe0b', bg2: '#fb5607', cta: '☎ 010-3242-1504' },
-  { file: 'og-reviews',     eyebrow: '실제 방문 후기',        title: '★ 4.9 / 5.0',       sub: '누적 1,287건',          bg1: '#ffd60a', bg2: '#ff8500', cta: '☎ 010-3242-1504' },
-  { file: 'og-price',       eyebrow: '투명한 정찰제',         title: '바가지 NO',         sub: '사전 정확 견적',        bg1: '#06d6a0', bg2: '#118ab2', cta: '☎ 010-3242-1504' },
-  { file: 'og-faq',         eyebrow: 'FAQ 30선',             title: '자주 묻는 질문',    sub: '예약 전 확인',          bg1: '#8338ec', bg2: '#3a86ff', cta: '☎ 010-3242-1504' }
+  { file: 'og-home',        eyebrow: '대전 둔산동 NO.1',     title: '대전세븐나이트',    sub: '4인1조 영탁',     bg1: '#ff2d55', bg2: '#ff6b00', cta: '☎ 010-7770-0869' },
+  { file: 'og-hoesik',      eyebrow: '대전 직장인 회식',      title: '대전 회식 2차',     sub: '둔산동 정답',           bg1: '#0066ff', bg2: '#5b00ff', cta: '☎ 010-7770-0869' },
+  { file: 'og-birthday',    eyebrow: '대전 생일파티',         title: '인생 생일파티',     sub: 'VIP룸 + 케이크 세팅',  bg1: '#ff006e', bg2: '#fb5607', cta: '☎ 010-7770-0869' },
+  { file: 'og-first',       eyebrow: '초보자 가이드',         title: '나이트 처음?',       sub: '걱정마, 다 챙겨드림',  bg1: '#06ffa5', bg2: '#0066ff', cta: '☎ 010-7770-0869' },
+  { file: 'og-group',       eyebrow: '8~20인 단체',          title: '단체 모임',          sub: 'VIP룸 즉시 세팅',       bg1: '#7209b7', bg2: '#3a0ca3', cta: '☎ 010-7770-0869' },
+  { file: 'og-guide',       eyebrow: '완벽 가이드',           title: '대전세븐나이트',    sub: '위치·시스템·부킹',     bg1: '#ffbe0b', bg2: '#fb5607', cta: '☎ 010-7770-0869' },
+  { file: 'og-reviews',     eyebrow: '실제 방문 후기',        title: '★ 4.9 / 5.0',       sub: '누적 1,287건',          bg1: '#ffd60a', bg2: '#ff8500', cta: '☎ 010-7770-0869' },
+  { file: 'og-price',       eyebrow: '투명한 정찰제',         title: '바가지 NO',         sub: '사전 정확 견적',        bg1: '#06d6a0', bg2: '#118ab2', cta: '☎ 010-7770-0869' },
+  { file: 'og-faq',         eyebrow: 'FAQ 30선',             title: '자주 묻는 질문',    sub: '예약 전 확인',          bg1: '#8338ec', bg2: '#3a86ff', cta: '☎ 010-7770-0869' }
 ];
 
 const buildSvg = ({ eyebrow, title, sub, bg1, bg2, cta }) => `
@@ -56,7 +56,7 @@ const buildSvg = ({ eyebrow, title, sub, bg1, bg2, cta }) => `
         font-family="sans-serif" font-size="76" font-weight="900" letter-spacing="2">${cta}</text>
 
   <text x="600" y="1070" text-anchor="middle" fill="#cccccc"
-        font-family="sans-serif" font-size="32" font-weight="500">매일 20:00 ~ 05:00 · 연중무휴 · W.T 원숭이</text>
+        font-family="sans-serif" font-size="32" font-weight="500">매일 20:00 ~ 05:00 · 연중무휴 · 영탁</text>
 
   <text x="600" y="1130" text-anchor="middle" fill="#888888"
         font-family="sans-serif" font-size="24" font-weight="400">theassetsquare-svg.github.io/seven2</text>

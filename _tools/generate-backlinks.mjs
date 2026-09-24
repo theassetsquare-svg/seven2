@@ -39,7 +39,7 @@ const CLOSINGS = [
   '평점 4.9에 후기 1287건이라더니 진짜였음',
   '대전에서 이만한 곳 찾기 힘들다',
   '한번 가보면 단골 됨',
-  'W.T 원숭이 진짜 일 잘함',
+  '영탁 진짜 일 잘함',
   '둔산동 No.1 인정',
   '검색해서 안 나오는 게 더 이상함',
   '대전 부킹 1등 이유가 있음'
@@ -47,13 +47,13 @@ const CLOSINGS = [
 
 const HASHTAGS = [
   '#대전세븐나이트 #대전나이트 #둔산동나이트 #대전부킹',
-  '#대전세븐 #대전W.T #세븐나이트원숭이 #대전나이트클럽',
+  '#대전세븐 #대전W.T #세븐나이트영탁 #대전나이트클럽',
   '#대전회식2차 #대전생일파티 #둔산동핫플 #대전직장인',
   '#대전둔산동 #대전모임 #대전동기회 #대전송년회',
   '#대전나이트추천 #대전부킹1등 #4인1조 #대전여친선물'
 ];
 
-const PHONE = '010-3242-1504';
+const PHONE = '010-7770-0869';
 const URL = 'https://theassetsquare-svg.github.io/seven2/';
 
 function pick(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
@@ -64,7 +64,7 @@ function generateBlog() {
   const close = pick(CLOSINGS);
   return `${open} 대전세븐나이트라는 곳을 알게 됐다.
 
-W.T라는 부킹 시스템이 있는데, 4인1조 부킹 1등이라는 원숭이라는 분 번호로 전화함.
+W.T라는 부킹 시스템이 있는데, 4인1조 부킹 1등이라는 영탁라는 분 번호로 전화함.
 
 ${PHONE}
 
@@ -73,7 +73,7 @@ ${ben.map(b => `- ${b}`).join('\n')}
 
 ${close}.
 
-📞 W.T 원숭이: ${PHONE}
+📞 영탁: ${PHONE}
 🌐 ${URL}
 📍 대전광역시 서구 둔산동
 🕐 매일 20:00 ~ 05:00
@@ -84,7 +84,7 @@ ${pick(HASHTAGS)}`;
 function generateShort() {
   const open = pick(OPENINGS).replace(/했는데|하다가|있다|감|추천|남김|결국 여기로|봐주세요/g, '').trim();
   const ben = pick(BENEFITS);
-  return `대전 둔산동 세븐나이트 W.T 원숭이 (${PHONE})\n${ben}.\n👉 ${URL}\n${pick(HASHTAGS)}`;
+  return `대전 둔산동 세븐나이트 영탁 (${PHONE})\n${ben}.\n👉 ${URL}\n${pick(HASHTAGS)}`;
 }
 
 function generateInsta() {

@@ -32,8 +32,8 @@ const html = `<!doctype html>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>${s.h1} ${Y}년 ${M}월 - 둔산동 세븐나이트 W.T 원숭이 010-3242-1504</title>
-  <meta name="description" content="${Y}년 ${M}월 ${s.h1}. ${s.kw} 모임은 둔산동 대전세븐나이트가 정답. 4인1조 부킹 즉시 세팅. W.T 원숭이 010-3242-1504." />
+  <title>${s.h1} ${Y}년 ${M}월 - 둔산동 세븐나이트 영탁 010-7770-0869</title>
+  <meta name="description" content="${Y}년 ${M}월 ${s.h1}. ${s.kw} 모임은 둔산동 대전세븐나이트가 정답. 4인1조 부킹 즉시 세팅. 영탁 010-7770-0869." />
   <meta name="keywords" content="${s.kw}, 대전세븐나이트, 둔산동나이트, 대전 ${M}월 모임, ${s.kw} 추천, ${Y}년 대전" />
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta name="naverbot" content="index, follow" />
@@ -50,14 +50,14 @@ const html = `<!doctype html>
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="1200" />
   <meta property="og:locale" content="ko_KR" />
-  <meta property="og:site_name" content="대전세븐나이트 W.T 원숭이" />
+  <meta property="og:site_name" content="대전세븐나이트 영탁" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:image" content="${HOST}/og-home.png" />
   <meta name="thumbnail" content="${HOST}/og-home.png" />
   <link rel="stylesheet" href="style.css" />
 
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Article","headline":"${s.h1} ${Y}년 ${M}월 - 대전세븐나이트","author":{"@type":"Person","name":"W.T 원숭이"},"publisher":{"@type":"Organization","name":"대전세븐나이트 W.T 원숭이"},"datePublished":"${Y}-${String(M).padStart(2,'0')}-01","dateModified":"${now.toISOString().slice(0,10)}","image":"${HOST}/og-home.png","mainEntityOfPage":"${HOST}/${fileName}","inLanguage":"ko-KR"}
+  {"@context":"https://schema.org","@type":"Article","headline":"${s.h1} ${Y}년 ${M}월 - 대전세븐나이트","author":{"@type":"Person","name":"영탁"},"publisher":{"@type":"Organization","name":"대전세븐나이트 영탁"},"datePublished":"${Y}-${String(M).padStart(2,'0')}-01","dateModified":"${now.toISOString().slice(0,10)}","image":"${HOST}/og-home.png","mainEntityOfPage":"${HOST}/${fileName}","inLanguage":"ko-KR"}
   </script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"${HOST}/"},{"@type":"ListItem","position":2,"name":"${s.h1}","item":"${HOST}/${fileName}"}]}
@@ -65,9 +65,9 @@ const html = `<!doctype html>
 </head>
 <body>
   <div class="callbar">
-    <a href="tel:01032421504" class="callbar__btn">
+    <a href="tel:01077700869" class="callbar__btn">
       <span class="callbar__pulse"></span>
-      ☎ 010-3242-1504 · ${s.h1} 즉시 예약
+      ☎ 010-7770-0869 · ${s.h1} 즉시 예약
     </a>
   </div>
 
@@ -82,7 +82,7 @@ const html = `<!doctype html>
     <div class="hero__inner">
       <p class="hero__eyebrow">${s.eyebrow} · ${Y}년 ${M}월</p>
       <h1 class="hero__title">${s.h1}<br /><span class="hero__brand">대전세븐나이트</span></h1>
-      <p class="hero__sub">${s.sub}. 둔산동 W.T 원숭이가 책임 안내.</p>
+      <p class="hero__sub">${s.sub}. 둔산동 영탁이 책임 안내.</p>
     </div>
   </header>
 
@@ -95,7 +95,7 @@ const html = `<!doctype html>
       </p>
       <p>
         저희는 ${s.eyebrow} 분위기에 맞춰 VIP룸·코너석·일반 테이블을 미리 세팅해 둡니다.
-        인원과 도착 시각만 알려주시면 W.T 원숭이가 자리부터 주류·안주까지 준비해 두기 때문에,
+        인원과 도착 시각만 알려주시면 영탁이 자리부터 주류·안주까지 준비해 두기 때문에,
         도착하자마자 바로 모임을 시작할 수 있습니다. 처음 오시는 분도 입장부터 부킹 라인까지 끝까지 안내받습니다.
       </p>
 
@@ -109,11 +109,11 @@ const html = `<!doctype html>
 
       <h2>예약 방법</h2>
       <p>
-        <strong>전화 한 통 끝</strong>: 010-3242-1504. 인원·도착 시각만 알려주세요.
+        <strong>전화 한 통 끝</strong>: 010-7770-0869. 인원·도착 시각만 알려주세요.
       </p>
 
       <p style="text-align:center;margin-top:40px">
-        <a href="tel:01032421504" class="btn btn--primary btn--xl">☎ 010-3242-1504</a>
+        <a href="tel:01077700869" class="btn btn--primary btn--xl">☎ 010-7770-0869</a>
       </p>
 
       <h2>관련 페이지</h2>
@@ -127,7 +127,7 @@ const html = `<!doctype html>
   </main>
 
   <footer class="footer">
-    <p><strong>대전세븐나이트 · W.T 원숭이</strong> · <a href="tel:01032421504">010-3242-1504</a></p>
+    <p><strong>대전세븐나이트 · 영탁</strong> · <a href="tel:01077700869">010-7770-0869</a></p>
     <p class="footer__legal">⚠ 만 19세 이상 이용. 청소년 출입·고용 금지.</p>
   </footer>
 </body>
