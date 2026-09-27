@@ -50,4 +50,4 @@ Allow: /
 User-agent: Bytespider
 Allow: /
 
-Sitemap: https://seven2.pages.dev/sitemap.xml
+Sitemap: https://u.nolcool.com/sitemap.xml

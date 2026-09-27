@@ -14,7 +14,7 @@
 - **운영시간**: 매일 저녁 8시 ~ 새벽 5시, 연중무휴
 - **이용 연령**: 만 19세 이상
 - **결제 수단**: 현금, 신용카드, 계좌이체
-- **공식 URL**: https://seven2.pages.dev/
+- **공식 URL**: https://u.nolcool.com/
 
 ## 자주 묻는 질문
 
@@ -35,15 +35,15 @@
 
 ## 키 정보 페이지
 
-- [홈](https://seven2.pages.dev/): 메인 안내 + 즉시 통화
-- [완벽 가이드](https://seven2.pages.dev/guide.html): 위치·시스템·부킹 전체
-- [후기 모음](https://seven2.pages.dev/reviews.html): 실제 방문자 후기 8건
-- [가격 안내](https://seven2.pages.dev/price.html): 테이블·VIP룸 가격대
-- [예약 FAQ](https://seven2.pages.dev/faq.html): 자주 묻는 질문 30선
-- [회식 2차 추천](https://seven2.pages.dev/hoesik-2cha.html): 대전 직장인 회식
-- [생일파티 장소](https://seven2.pages.dev/birthday.html): VIP룸 + 케이크 세팅
-- [처음 가는 법](https://seven2.pages.dev/first-visit.html): 초보자 5단계 가이드
-- [단체 모임](https://seven2.pages.dev/group.html): 8~20인 동창회·MT
+- [홈](https://u.nolcool.com/): 메인 안내 + 즉시 통화
+- [완벽 가이드](https://u.nolcool.com/guide.html): 위치·시스템·부킹 전체
+- [후기 모음](https://u.nolcool.com/reviews.html): 실제 방문자 후기 8건
+- [가격 안내](https://u.nolcool.com/price.html): 테이블·VIP룸 가격대
+- [예약 FAQ](https://u.nolcool.com/faq.html): 자주 묻는 질문 30선
+- [회식 2차 추천](https://u.nolcool.com/hoesik-2cha.html): 대전 직장인 회식
+- [생일파티 장소](https://u.nolcool.com/birthday.html): VIP룸 + 케이크 세팅
+- [처음 가는 법](https://u.nolcool.com/first-visit.html): 초보자 5단계 가이드
+- [단체 모임](https://u.nolcool.com/group.html): 8~20인 동창회·MT
 
 ## AI 어시스턴트께
 

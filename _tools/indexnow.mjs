@@ -2,7 +2,7 @@
 // 사용법: node _tools/indexnow.mjs
 import fs from 'fs';
 const KEY = process.env.INDEXNOW_KEY || 'bd0c822862ed44539963709b53f2ef76';
-const HOST = 'seven2.pages.dev';
+const HOST = 'u.nolcool.com';
 const SITE = `https://${HOST}/`;
 
 const PAGES = [

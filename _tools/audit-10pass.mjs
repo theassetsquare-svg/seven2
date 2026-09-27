@@ -1,7 +1,7 @@
 // 10-pass SEO 감사 — 구글/네이버/AI 상위노출 준비 검증
 import fs from 'fs';
 
-const BASE = 'https://seven2.pages.dev';
+const BASE = 'https://u.nolcool.com';
 const PAGES = ['', 'guide.html', 'reviews.html', 'price.html', 'faq.html',
                'hoesik-2cha.html', 'birthday.html', 'first-visit.html', 'group.html'];
 

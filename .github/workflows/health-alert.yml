@@ -22,7 +22,7 @@ jobs:
       - name: 전 페이지 200 + 홈 키워드 노출 체크
         id: check
         run: |
-          BASE="https://seven2.pages.dev"
+          BASE="https://u.nolcool.com"
           FAIL=""
           # sitemap의 모든 URL 추출
           URLS=$(curl -sL "$BASE/sitemap.xml" | grep -oP '(?<=<loc>)[^<]+')

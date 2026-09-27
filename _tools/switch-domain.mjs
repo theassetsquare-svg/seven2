@@ -1,7 +1,7 @@
 // 메인 도메인을 Cloudflare Pages로 통일
 import fs from 'fs';
 const OLD = 'https://theassetsquare-svg.github.io/seven2/';
-const NEW = 'https://seven2.pages.dev/';
+const NEW = 'https://u.nolcool.com/';
 const exts = ['.html', '.xml', '.txt', '.json', '.md', '.webmanifest'];
 const files = fs.readdirSync('.').filter(f => exts.some(e => f.endsWith(e)));
 let total = 0;

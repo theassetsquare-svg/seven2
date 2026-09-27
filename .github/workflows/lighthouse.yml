@@ -31,16 +31,16 @@ jobs:
                 "numberOfRuns": 1,
                 "settings": { ${PRESET}"onlyCategories":["seo","performance","accessibility","best-practices"] },
                 "url": [
-                  "https://seven2.pages.dev/",
-                  "https://seven2.pages.dev/guide.html",
-                  "https://seven2.pages.dev/reviews.html",
-                  "https://seven2.pages.dev/price.html",
-                  "https://seven2.pages.dev/faq.html",
-                  "https://seven2.pages.dev/hoesik-2cha.html",
-                  "https://seven2.pages.dev/birthday.html",
-                  "https://seven2.pages.dev/first-visit.html",
-                  "https://seven2.pages.dev/group.html",
-                  "https://seven2.pages.dev/season-2026-06.html"
+                  "https://u.nolcool.com/",
+                  "https://u.nolcool.com/guide.html",
+                  "https://u.nolcool.com/reviews.html",
+                  "https://u.nolcool.com/price.html",
+                  "https://u.nolcool.com/faq.html",
+                  "https://u.nolcool.com/hoesik-2cha.html",
+                  "https://u.nolcool.com/birthday.html",
+                  "https://u.nolcool.com/first-visit.html",
+                  "https://u.nolcool.com/group.html",
+                  "https://u.nolcool.com/season-2026-06.html"
                 ]
               },
               "assert": {

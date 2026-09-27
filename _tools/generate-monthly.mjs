@@ -24,7 +24,7 @@ const SEASONS = {
 
 const s = SEASONS[M];
 const fileName = `season-${Y}-${String(M).padStart(2,'0')}.html`;
-const HOST = 'https://seven2.pages.dev';
+const HOST = 'https://u.nolcool.com';
 
 // 페이지 템플릿
 const html = `<!doctype html>

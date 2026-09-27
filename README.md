@@ -69,7 +69,7 @@ git push -u origin main
 ```
 
 이후 GitHub 저장소 → Settings → Pages → Source: `main` / `/ (root)` 선택.
-배포 URL: `https://seven2.pages.dev/`
+배포 URL: `https://u.nolcool.com/`
 
 ## 검색 등록 (배포 직후 필수)
 

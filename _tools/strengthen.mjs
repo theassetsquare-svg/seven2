@@ -80,7 +80,7 @@ if (!priceHtml.includes('application/ld+json')) {
   {"@context":"https://schema.org","@type":"Product","name":"대전세븐나이트 부킹 예약 (4인1조)","description":"대전세븐나이트 4인1조 부킹 예약. 일반 테이블·코너석·VIP룸 정찰제. 영탁 010-7770-0869.","brand":{"@type":"Brand","name":"대전세븐나이트"},"offers":{"@type":"AggregateOffer","priceCurrency":"KRW","lowPrice":"100000","highPrice":"500000","offerCount":"4","availability":"https://schema.org/InStock","seller":{"@type":"Organization","name":"대전세븐나이트 영탁","telephone":"+82-10-7770-0869"}},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"1287"}}
   </script>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Article","headline":"대전세븐나이트 가격 안내","author":{"@type":"Person","name":"영탁"},"datePublished":"2026-04-28","image":"https://seven2.pages.dev/og-price.png","mainEntityOfPage":"https://seven2.pages.dev/price.html","inLanguage":"ko-KR","publisher":{"@type":"Organization","name":"대전세븐나이트 영탁"}}
+  {"@context":"https://schema.org","@type":"Article","headline":"대전세븐나이트 가격 안내","author":{"@type":"Person","name":"영탁"},"datePublished":"2026-04-28","image":"https://u.nolcool.com/og-price.png","mainEntityOfPage":"https://u.nolcool.com/price.html","inLanguage":"ko-KR","publisher":{"@type":"Organization","name":"대전세븐나이트 영탁"}}
   </script>`;
   priceHtml = priceHtml.replace(/(<link rel="stylesheet" href="style\.css[^"]*" \/>)/, `$1${ld}`);
   fs.writeFileSync('price.html', priceHtml);

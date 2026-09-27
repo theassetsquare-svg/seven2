@@ -1,7 +1,7 @@
 // 풀 강도 sitemap.xml 자동 생성 (Google/Naver 권장 사양 준수)
 import fs from 'fs';
 
-const HOST = 'https://seven2.pages.dev';
+const HOST = 'https://u.nolcool.com';
 const NOW = new Date().toISOString();
 
 // 각 페이지 + 페이지별 이미지 + 메타데이터
